@@ -7,7 +7,14 @@ var Model = require('../models/modelMoniteurs');
 
 module.exports = {
 
-   
+    Affichage_Moniteurs : (req, res) => {     
+        
+        Model.Affichage_Moniteurs(function(lignes){
+             console.log(lignes);
+             res.render("./testAffichage", {index : lignes});
+         });
+         
+     },
    
 
 }

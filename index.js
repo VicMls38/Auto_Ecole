@@ -13,6 +13,7 @@ const fs = require('fs')
 AJOUTER ROUTES !*/
 const RouteurDefaut = require('./routes/routeDefaut')
 const RouteurEleves = require('./routes/routeEleves')
+const RouteurMoniteurs = require('./routes/routeMoniteurs')
 const RouteurExamens = require('./routes/routeExamens')
 const RouteurVehicules = require('./routes/routeVehicules')
 
@@ -27,7 +28,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use('/', RouteurDefaut);
-app.use('/', RouteurEleves);
+//app.use('/', RouteurEleves);
+app.use('/', RouteurMoniteurs);
 
 // Définition du port de l'application  
 const port = 3000
