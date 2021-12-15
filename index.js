@@ -38,7 +38,3 @@ app.listen(port, () => {
 
 
 module.exports = app
-// erreur 404 //
-app.use((req, res) => {
-    res.status(404).render('erreur')
-});
