@@ -10,8 +10,9 @@ const path = require('path')
 const fs = require('fs')
 
 /* 
-AJOUTER ROUTES !
-*/
+AJOUTER ROUTES !*/
+const Routeur = require('./routes/routeDefaut')
+
 
 
 // activation des dépendances 
@@ -21,6 +22,8 @@ app.use(express.static('views'))
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
+
+app.use('/', Routeur);
 
 // Définition du port de l'application  
 const port = process.env.port || 3000
@@ -43,7 +46,7 @@ app.listen(port+1, () => {
   })
 
 
-app.use('/Auto_ecole', Routeur);
+
 
 module.exports = app
 // erreur 404 //
