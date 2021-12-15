@@ -29,7 +29,7 @@ app.use('/', Routeur);
 const port = 3000
 
 
-/* partie test pour capture non chiffrée : Wireshark. */
+/* partie test pour capture non chiffrée Wireshark. */
 app.listen(port, () => {
     console.log(`Serveur HTTP fonctionnel. Go http://localhost:${port}`)
   })
