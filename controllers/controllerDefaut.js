@@ -2,7 +2,7 @@
 const bodyParser = require('body-parser');
 var db = require('../database');
 //Importation du fichier models
-var Model = require('../models/Model');
+var Model = require('../models/modelDefaut');
 
 
 module.exports = {

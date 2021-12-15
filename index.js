@@ -26,23 +26,12 @@ app.use(express.urlencoded({extended: false}))
 app.use('/', Routeur);
 
 // Définition du port de l'application  
-const port = process.env.port || 3000
-
-// Définition des certificats pour le protocole HTTPS
-const key = fs.readFileSync(path.join(__dirname, 'certificate', 'cert.key'))
-const cert = fs.readFileSync(path.join(__dirname, 'certificate', 'cert.cert'))
-const options = { key, cert }
+const port = 3000
 
 
-// DÉMARRAGE DE L'APPLICATION
-https.createServer(options, app).listen(port, () => {
-    console.log(`Serveur HTTPS fonctionnel. Go https://localhost:${port}`)
-  })
-
-  
 /* partie test pour capture non chiffrée : Wireshark. */
-app.listen(port+1, () => {
-    console.log(`Serveur HTTP fonctionnel. Go http://localhost:${port+1}`)
+app.listen(port, () => {
+    console.log(`Serveur HTTP fonctionnel. Go http://localhost:${port}`)
   })
 
 
