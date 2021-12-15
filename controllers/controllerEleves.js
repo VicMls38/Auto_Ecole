@@ -7,6 +7,17 @@ var Model = require('../models/modelEleves');
 
 module.exports = {
 
+
+
+    // Fonction de connexion avec where //
+    Affichage_Eleves : (req, res) => {     
+        
+       Model.Affichage_Eleves(function(lignes){
+            console.log(lignes);
+            res.render("./testAffichage", {index : lignes});
+        });
+        
+    },
    
    
 

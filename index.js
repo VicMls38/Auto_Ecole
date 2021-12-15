@@ -11,7 +11,10 @@ const fs = require('fs')
 
 /* 
 AJOUTER ROUTES !*/
-const Routeur = require('./routes/routeDefaut')
+const RouteurDefaut = require('./routes/routeDefaut')
+const RouteurEleves = require('./routes/routeEleves')
+const RouteurExamens = require('./routes/routeExamens')
+const RouteurVehicules = require('./routes/routeVehicules')
 
 
 
@@ -23,13 +26,14 @@ app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
-app.use('/', Routeur);
+app.use('/', RouteurDefaut);
+app.use('/', RouteurEleves);
 
 // Définition du port de l'application  
 const port = 3000
 
 
-/* partie test pour capture non chiffrée Wireshark. */
+/* partie test pour capture non chiffrée : Wireshark. */
 app.listen(port, () => {
     console.log(`Serveur HTTP fonctionnel. Go http://localhost:${port}`)
   })
