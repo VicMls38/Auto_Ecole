@@ -14,7 +14,7 @@ module.exports = {
         
        Model.Affichage_Eleves(function(lignes){
             console.log(lignes);
-            res.render("./testAffichage", {index : lignes});
+            res.render("./accueil", {index : lignes});
         });
         
     },

@@ -11,8 +11,31 @@
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea veniam quam cum, est perferendis quisquam, nesciunt perspiciatis ullam dolor laborum praesentium animi repellendus voluptas tempore blanditiis sunt cupiditate doloribus sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae commodi cumque, exercitationem quas vitae illum consectetur quasi alias fugit ratione, neque corporis numquam id sunt, saepe facilis. Odit, eum repellendus.
-                    </div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Nom </th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Date de naissance</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <% index.forEach(function(user){ %>
+                        
+                            <tr>
+                                <td><%= user.Nom %> </td>
+                                <td> <%= user.Prenom %></td>
+                                <td> <%= user.Date_Naissance %></td>
+                            </tr>
+                            <% }) %>
+                            </tbody>
+                      
+                        </table>
+                        
+                       
+                       
+                     </div>
+                    
                   </div>
                 </div>
             </div>

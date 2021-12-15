@@ -28,7 +28,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use('/', RouteurDefaut);
-//app.use('/', RouteurEleves);
+app.use('/', RouteurEleves);
 app.use('/', RouteurMoniteurs);
 
 // Définition du port de l'application  

@@ -9,3 +9,7 @@ html, body {
     max-width: 1200px;
     margin:auto;
   }
+
+  td{
+    margin: 5% !important;
+  }
