@@ -5,7 +5,7 @@ const Controller = require('../controllers/controllerEleves');
 
 const routeur = express.Router();
 
-routeur.post("/register", urlencodedParser, Controller.Register);
+routeur.post("/register_e", urlencodedParser, Controller.Register);
 routeur.get("/eleve", Controller.Page_Eleves);
 routeur.get("/ajout_eleve", Controller.Ajout_Eleves);
 

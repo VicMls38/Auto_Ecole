@@ -24,10 +24,11 @@ module.exports = {
      Register : (req, res) => {
         let nom = req.body.nom;
         let prenom = req.body.prenom;
-        let date_naissance = req.body.date_naissance
   
-        Model.Inscription_Moniteurs(nom, prenom, date_naissance)
-        res.render("./moniteur")
+        Model.Inscription_Moniteurs(nom, prenom)
+        Model.Affichage_Moniteurs(function(lignes){
+            res.render("./moniteur", {index : lignes});
+        });
     },
    
    
