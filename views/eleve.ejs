@@ -1,4 +1,5 @@
 <%-include('header')%>
+
 <div class="container">
     <div class="row">
         <div class="col p-3">
@@ -17,6 +18,7 @@
                                 <th scope="col">Nom </th>
                                 <th scope="col">Prénom</th>
                                 <th scope="col">Date de naissance</th>
+                                <th><a href="/ajout_eleve"><button>Ajouter</button></a></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -26,13 +28,14 @@
                                 <td><%= user.Nom %> </td>
                                 <td> <%= user.Prenom %></td>
                                 <td> <%= user.Date_Naissance %></td>
+                                <td></td>
+                                
                             </tr>
                             <% }) %>
                             </tbody>
                       
                         </table>
                         
-                       
                        
                      </div>
                     
