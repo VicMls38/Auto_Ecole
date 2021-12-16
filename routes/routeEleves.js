@@ -1,9 +1,11 @@
 const express = require('express');
+var bodyParser = require('body-parser')
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 const Controller = require('../controllers/controllerEleves');
 
 const routeur = express.Router();
 
-routeur.get("/testAffichage", Controller.Affichage_Eleves);
+routeur.post("/register", urlencodedParser, Controller.Register);
 routeur.get("/eleve", Controller.Page_Eleves);
 routeur.get("/ajout_eleve", Controller.Ajout_Eleves);
 

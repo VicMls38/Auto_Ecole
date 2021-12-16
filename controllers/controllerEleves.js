@@ -37,10 +37,12 @@ module.exports = {
         let nom = req.body.nom;
         let prenom = req.body.prenom;
         let date_naissance = req.body.date_naissance
-  
+        console.log(nom, prenom, date_naissance)
 
         Model.Inscription_Eleves(nom, prenom, date_naissance)
-        res.render("./eleve")
+        Model.Affichage_Eleves(function(lignes){
+            res.render("./eleve", {index : lignes});
+        });
     },
    
    
