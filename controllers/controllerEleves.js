@@ -39,7 +39,7 @@ module.exports = {
         let date_naissance = req.body.date_naissance
   
 
-        Model.Inscription(nom, prenom, date_naissance)
+        Model.Inscription_Eleves(nom, prenom, date_naissance)
         res.render("./eleve")
     },
    
