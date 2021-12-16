@@ -1,0 +1,49 @@
+<%-include('header')%>
+<div class="container">
+    <div class="row">
+        <div class="col p-3">
+            <div class="accordion col-sm" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Eleves
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Nom </th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Date de naissance</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <% index.forEach(function(user){ %>
+                        
+                            <tr>
+                                <td><%= user.Nom %> </td>
+                                <td> <%= user.Prenom %></td>
+                                <td> <%= user.Date_Naissance %></td>
+                            </tr>
+                            <% }) %>
+                            </tbody>
+                      
+                        </table>
+                        
+                       
+                       
+                     </div>
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%-include('footer')%>
