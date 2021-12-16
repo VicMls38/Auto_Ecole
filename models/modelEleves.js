@@ -21,7 +21,6 @@ module.exports={
         var sql="SELECT Nom, Prenom, DATE_FORMAT(Date_Naissance, '%d/%m/%Y') AS Date_Naissance  FROM eleve";
         db.query(sql, function (err, data, fields){
             if (err){throw err};
-                console.log(data);
                 return callback(data);
             
         });

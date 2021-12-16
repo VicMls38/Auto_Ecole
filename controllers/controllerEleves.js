@@ -13,7 +13,6 @@ module.exports = {
     Affichage_Eleves : (req, res) => {     
         
        Model.Affichage_Eleves(function(lignes){
-            console.log(lignes);
             res.render("./accueil", {index : lignes});
         });
         
