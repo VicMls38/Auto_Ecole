@@ -21,7 +21,7 @@ module.exports = {
     Affichage_Eleves : (req, res) => {     
         
        Model.Affichage_Eleves(function(lignes){
-            res.render("./accueil", {index : lignes});
+            res.render("./accueil", {index_e : lignes});
         });
         
     },

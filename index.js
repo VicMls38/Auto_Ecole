@@ -15,7 +15,7 @@ AJOUTER ROUTES !*/
 const RouteurDefaut = require('./routes/routeDefaut')
 const RouteurEleves = require('./routes/routeEleves')
 const RouteurMoniteurs = require('./routes/routeMoniteurs')
-const RouteurExamens = require('./routes/routeExamens')
+const RouteurPlanning = require('./routes/routePlanning')
 const RouteurVehicules = require('./routes/routeVehicules')
 
 
@@ -37,6 +37,7 @@ app.use(require('body-parser').json())
 app.use('/', RouteurDefaut);
 app.use('/', RouteurEleves);
 app.use('/', RouteurMoniteurs);
+app.use('/', RouteurPlanning);
 
 // Définition du port de l'application  
 const port = 3000
