@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log(Date.now);
     var calendarEl = document.getElementById('calendar');
   
-    let planning = "<% index_p.forEach(function(user){ %><%= user.titre %>,<%= user.date %>,<%= user.heure_debut %><% }) %>";
+    let planning = "<% index_p.forEach(function(user){ %><%= user.titre %>,<%= user.date %>,<%= user.heure_debut %>,<%= user.heure_fin %><% }) %>";
     let tab_planning = planning.split(',');
 
     var today = new Date();
@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         {
           title: tab_planning[0],
-          start: tab_planning[1]+'T'+tab_planning[2]
+          start: tab_planning[1]+'T'+tab_planning[2],
+          end: tab_planning[1]+'T'+tab_planning[3]
         },
 
       ]
