@@ -8,7 +8,7 @@ module.exports={
 
     Affichage_Planning:function(callback){
 
-        var sql="SELECT *, DATE_FORMAT(date, '%d/%m/%Y') AS date  FROM planning";
+        var sql="SELECT *, DATE_FORMAT(date, '%Y-%m-%d') AS date  FROM planning";
         db.query(sql, function (err, data, fields){
             console.log(data);
             if (err){throw err};

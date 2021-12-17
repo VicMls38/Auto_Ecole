@@ -1,13 +1,16 @@
 <%-include('header')%>
 
+<div>
+  
 <script>
+
 document.addEventListener('DOMContentLoaded', function() {
   
     var calendarEl = document.getElementById('calendar');
   
     let planning = "<% index_p.forEach(function(user){ %><%= user.titre %>,<%= user.date %>,<%= user.heure_debut %><% }) %>";
-    let tab_planning = stock.split(',');
-    console.log(tab_planning);
+    let tab_planning = planning.split(',');
+    //console.log(tab_planning);
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'timeGridDay',
@@ -15,22 +18,18 @@ document.addEventListener('DOMContentLoaded', function() {
       locale: 'fr',
       
       events: [
-        
-        {
-          title: 'route',
-          start: '2021-11-07T07:00:00'
-        },
 
-       /* {
+        {
           title: tab_planning[0],
           start: tab_planning[1]+'T'+tab_planning[2]
-        },*/
+        },
 
       ]
     });
   
     calendar.render();
   });</script>
+  </div>
 
 <div class="container">
     <div class="row">
