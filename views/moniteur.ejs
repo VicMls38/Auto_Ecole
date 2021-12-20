@@ -17,7 +17,7 @@
                             <tr>
                                 <th scope="col">Nom </th>
                                 <th scope="col">Prénom</th>
-                                <th><a href="/ajout_moniteur"><button>Ajouter</button></a></th>
+                                <th><a href="/ajout_moniteur"><button type="button" class="btn btn-success">Ajouter</button></a></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -26,8 +26,8 @@
                             <tr>
                                 <td><%= user.Nom %> </td>
                                 <td> <%= user.Prenom %></td>
-                                <td><a href="/supprimer_m?id=<%= user.Id%>"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
-                                
+                                <td><a href="/supprimer_m?id=<%= user.Id%>"><button type="button" class="btn btn-danger">Supprimer</button></a>
+                                    <a href="/modifier_moniteur?id=<%= user.Id%>"><button type="button" class="btn btn-warning">Modifier</button></a></td>
                             </tr>
                             <% }) %>
                             </tbody>

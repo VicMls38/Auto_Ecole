@@ -38,4 +38,28 @@ module.exports={
         });
     },
 
+
+    Affichage_Modif_moniteur:function(callback, moniteur_Id){
+
+        var sql="SELECT Id, Nom, Prenom  FROM moniteur where id= '"+moniteur_Id+"'";
+        db.query(sql, function (err, data, fields){
+            if (err){throw err};
+                console.log(data);
+                return callback(data);
+            
+        });
+    },
+
+    Modifier_Moniteur:function(moniteur_Id, nom, prenom){
+
+        console.log(moniteur_Id, nom, prenom)
+        var sql="Update moniteur set nom = '"+nom+"', prenom = '"+prenom+"' where id = '"+moniteur_Id+"' ";
+        db.query(sql, function (err, result) {
+            if (err) throw err;
+            console.log(result.affectedRows + " record(s) updated");
+          });
+
+    },
+   
+
 }
