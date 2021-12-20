@@ -30,6 +30,15 @@ module.exports = {
             res.render("./moniteur", {index : lignes});
         });
     },
+
+    Supprimer_Moniteur : (req, res) => {
+        let moniteur_Id = req.query['id'];
+  
+        Model.Supprimer_Moniteur(moniteur_Id)
+        Model.Affichage_Moniteurs(function(lignes){
+            res.render("./moniteur", {index : lignes});
+        });
+    },
    
    
 

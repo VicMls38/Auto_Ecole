@@ -8,7 +8,7 @@ module.exports={
 
     Affichage_Moniteurs:function(callback){
 
-        var sql="SELECT Nom, Prenom  FROM moniteur";
+        var sql="SELECT Id, Nom, Prenom  FROM moniteur";
         db.query(sql, function (err, data, fields){
             if (err){throw err};
                 console.log(data);
@@ -17,7 +17,7 @@ module.exports={
         });
     },
 
-    Inscription_Moniteurs:function(nom, prenom, date_naissance){
+    Inscription_Moniteurs:function(nom, prenom){
 
         var sql="Insert Into moniteur (Nom, Prenom) Values ('"+nom+"', '"+prenom+"') ";
         db.query(sql, function (err, result) {
@@ -27,5 +27,15 @@ module.exports={
 
     },
    
+    Supprimer_Moniteur:function(moniteur_Id){
+
+        console.log(moniteur_Id)
+        var sql="Delete FROM moniteur WHERE id ='"+moniteur_Id+"' ";
+        db.query(sql, function (err, result) {
+            if (err) throw err;
+            console.log(result.affectedRows + " record(s) Deleted");
+            
+        });
+    },
 
 }
