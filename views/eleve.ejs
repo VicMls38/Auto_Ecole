@@ -18,7 +18,7 @@
                                 <th scope="col">Nom </th>
                                 <th scope="col">Prénom</th>
                                 <th scope="col">Date de naissance</th>
-                                <th><a href="/ajout_eleve"><button>Ajouter</button></a></th>
+                                <th><a href="/ajout_eleve"><button type="button" class="btn btn-success">Ajouter</button></a></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -28,7 +28,8 @@
                                 <td><%= user.Nom %> </td>
                                 <td> <%= user.Prenom %></td>
                                 <td> <%= user.Date_Naissance %></td>
-                                <td></td>
+                                <td><a href="/supprimer_e?id=<%=user.Id%>"><button type="button" class="btn btn-danger">Supprimer</button></a>
+                                    <a href="/modif_eleve?id=<%=user.Id%>"><button type="button" class="btn btn-warning">Modifier</button></a></td>
                                 
                             </tr>
                             <% }) %>
