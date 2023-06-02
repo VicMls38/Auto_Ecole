@@ -39,7 +39,7 @@
 	-> Tapez la commande : "node index.js".
 
    ###### Pour accéder à l'outil :
-	L'outil se lance par défaut à l'adresse suivante : "A venir".
+	L'outil se lance par défaut à l'adresse suivante : "https://127.0.0.1:3000".
 
 
 
